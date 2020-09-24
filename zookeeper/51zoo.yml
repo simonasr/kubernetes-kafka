@@ -91,11 +91,3 @@ spec:
           name: zookeeper-config
       - name: config
         emptyDir: {}
-  volumeClaimTemplates:
-  - metadata:
-      name: data
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 1Gi
