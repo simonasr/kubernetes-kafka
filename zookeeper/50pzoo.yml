@@ -81,19 +81,9 @@ spec:
         volumeMounts:
         - name: config
           mountPath: /etc/kafka
-        - name: data
-          mountPath: /var/lib/zookeeper
       volumes:
       - name: configmap
         configMap:
           name: zookeeper-config
       - name: config
         emptyDir: {}
-  volumeClaimTemplates:
-  - metadata:
-      name: data
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 1Gi
