@@ -10,8 +10,11 @@ spec:
         image: solsson/kafka:native-zookeeper-server-start@sha256:ba3a0632240b8906a3b5bb6441e98ad9d9de73cb716b156ca68f1b435c819e8b
         resources:
           requests:
-            cpu: 10m
-            memory: 25Mi
+            cpu: 5m
+            memory: 10Mi
+          limits:
+            cpu: 50m
+            memory: 60Mi
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -25,5 +28,8 @@ spec:
         image: solsson/kafka:native-zookeeper-server-start@sha256:ba3a0632240b8906a3b5bb6441e98ad9d9de73cb716b156ca68f1b435c819e8b
         resources:
           requests:
-            cpu: 10m
-            memory: 25Mi
+            cpu: 5m
+            memory: 10Mi
+          limits:
+            cpu: 50m
+            memory: 60Mi
