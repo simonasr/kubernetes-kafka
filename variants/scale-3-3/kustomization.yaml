@@ -8,5 +8,5 @@ patchesJson6902:
     version: v1
     kind: StatefulSet
     name: kafka
-    namespace: kafka
+    namespace: default
   path: kafka-zookeeper-connect-only-zoo.json

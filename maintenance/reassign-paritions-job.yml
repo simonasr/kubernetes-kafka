@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: reassign-partitions
-  namespace: kafka
+  namespace: default
 spec:
   template:
     metadata:
@@ -32,7 +32,7 @@ spec:
           echo "# reassign-topics.json";
           cat /tmp/reassign-topics.json;
 
-          ./bin/kafka-reassign-partitions.sh 
+          ./bin/kafka-reassign-partitions.sh
           --zookeeper=$ZOOKEEPER
           --generate
           --topics-to-move-json-file=/tmp/reassign-topics.json
